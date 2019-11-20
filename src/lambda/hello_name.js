@@ -1,8 +1,11 @@
 exports.handler = async (event, context, callback) => {
+    console.log("event",  event);
+    console.log("context",  context);
+    
     callback(null, {
         statusCode: 301,
         headers: {
-            Location: 'https://novomed-portal-qa.netlify.com',
+            Location: 'https://novomed-portal-qa.netlify.com/dashboard/appointments',
         },
     });
 };
