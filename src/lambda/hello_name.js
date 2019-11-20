@@ -1,6 +1,6 @@
 exports.handler = async (event, context, callback) => {
     console.log("event",  event);
-    console.log("context",  context);
+    console.log("context",  context.body, JSON.parse(context.body);
     
     callback(null, {
         statusCode: 301,
