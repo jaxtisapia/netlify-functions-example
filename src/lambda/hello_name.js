@@ -1,10 +1,8 @@
-exports.handler = async (event, context) => {
-  const name = event.queryStringParameters.name || "World";
-  
-  console.log("test justice", name)
-
-  return {
-    statusCode: 200,
-    body: `Hello, ${name}`
-  };
+exports.handler = async (event, context, callback) => {
+    callback(null, {
+        statusCode: 301,
+        headers: {
+            Location: 'https://novomed-portal-qa.netlify.com',
+        },
+    });
 };
